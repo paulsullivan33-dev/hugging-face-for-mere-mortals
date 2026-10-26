@@ -1,0 +1,51 @@
+$ find ~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2 | sort
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/blobs
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/blobs/09166c56d46ec8eca5f1e46e4e4a62265fca5975a70a2b263c1795291a685cf7
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/blobs/226b0752cac7789c48f0cb3ec53eda48b7be36cc
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/blobs/2c81a6c4c984e95a45338c64a7445c1f0f88077f
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/blobs/3cd4987249615ca870f2c18e657a62f0962aecad0eac790dd89362227310fd30
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/blobs/817762d631ad6f9c799f6b9dc713c46420e65546
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/blobs/ae8c63daedbd4206d7d40126955d4e6ab1c80f8f
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/blobs/b00361fece0387ca34b4b8b8539ed830d644dbeb
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/blobs/b706b24034032bdfe765ded5ab6403d201d295a995b790cb24c74becca5c04e6
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/blobs/be4d21d94f3b4687e5a54d84bf6ab46ed0f8defd
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/refs
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/refs/main
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/snapshots
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/snapshots/5f91d94bd9cd7190a9f3216ff93cd1dd95f2c7be
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/snapshots/5f91d94bd9cd7190a9f3216ff93cd1dd95f2c7be/.gitattributes
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/snapshots/5f91d94bd9cd7190a9f3216ff93cd1dd95f2c7be/config.json
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/snapshots/5f91d94bd9cd7190a9f3216ff93cd1dd95f2c7be/flax_model.msgpack
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/snapshots/5f91d94bd9cd7190a9f3216ff93cd1dd95f2c7be/merges.txt
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/snapshots/5f91d94bd9cd7190a9f3216ff93cd1dd95f2c7be/pytorch_model.bin
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/snapshots/5f91d94bd9cd7190a9f3216ff93cd1dd95f2c7be/special_tokens_map.json
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/snapshots/5f91d94bd9cd7190a9f3216ff93cd1dd95f2c7be/tf_model.h5
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/snapshots/5f91d94bd9cd7190a9f3216ff93cd1dd95f2c7be/tokenizer_config.json
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/snapshots/5f91d94bd9cd7190a9f3216ff93cd1dd95f2c7be/vocab.json
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/trees
+~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/trees/5f91d94bd9cd7190a9f3216ff93cd1dd95f2c7be.json
+
+$ ls -l ~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/snapshots/*/ 
+total 32
+lrwxrwxrwx 1 root nogroup 52 Oct 26 02:51 config.json -> ../../blobs/2c81a6c4c984e95a45338c64a7445c1f0f88077f
+lrwxrwxrwx 1 root nogroup 76 Oct 26 02:51 flax_model.msgpack -> ../../blobs/3cd4987249615ca870f2c18e657a62f0962aecad0eac790dd89362227310fd30
+lrwxrwxrwx 1 root nogroup 52 Oct 26 02:51 merges.txt -> ../../blobs/226b0752cac7789c48f0cb3ec53eda48b7be36cc
+lrwxrwxrwx 1 root nogroup 76 Oct 26 02:51 pytorch_model.bin -> ../../blobs/b706b24034032bdfe765ded5ab6403d201d295a995b790cb24c74becca5c04e6
+lrwxrwxrwx 1 root nogroup 52 Oct 26 02:51 special_tokens_map.json -> ../../blobs/817762d631ad6f9c799f6b9dc713c46420e65546
+lrwxrwxrwx 1 root nogroup 76 Oct 26 02:51 tf_model.h5 -> ../../blobs/09166c56d46ec8eca5f1e46e4e4a62265fca5975a70a2b263c1795291a685cf7
+lrwxrwxrwx 1 root nogroup 52 Oct 26 02:51 tokenizer_config.json -> ../../blobs/be4d21d94f3b4687e5a54d84bf6ab46ed0f8defd
+lrwxrwxrwx 1 root nogroup 52 Oct 26 02:51 vocab.json -> ../../blobs/b00361fece0387ca34b4b8b8539ed830d644dbeb
+$ cat ~/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/refs/main
+5f91d94bd9cd7190a9f3216ff93cd1dd95f2c7be
+$ du -sh ~/.cache/huggingface/hub
+262M	/home/hatch/.cache/huggingface/hub
+
+$ hf cache ls
+ID                                       SIZE LAST_ACCESSED  LAST_MODIFIED  REFS
+-------------------------------------- ------ -------------- -------------- ----
+dataset/cornell-movie-review-data/r... 888.5K 3 minutes ago  3 minutes ago  main
+model/distilbert-base-uncased-finet... 268.1M 6 minutes ago  6 minutes ago  main
+model/sshleifer/tiny-gpt2                4.7M 10 minutes ago 10 minutes ago main
+
+Found 3 repo(s) for a total of 3 revision(s) and 273.7M on disk.

@@ -1,0 +1,7 @@
+$ hf download sshleifer/tiny-gpt2
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 9 files: 100%|██████████| 9/9 [00:08<00:00,  1.04it/s]
+✓ Downloaded
+  path: /home/hatch/.cache/huggingface/hub/models--sshleifer--tiny-gpt2/snapshots/5f91d94bd9cd7190a9f3216ff93cd1dd95f2c7be

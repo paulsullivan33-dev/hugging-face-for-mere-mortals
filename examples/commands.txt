@@ -1,0 +1,45 @@
+Hugging Face — the distilled commands
+====================================================================
+Placeholders: <owner/model> is a repository address from the
+Hub; <file> is a filename from its Files tab.
+
+SETUP (chapter 4)
+--------------------------------------------------------------------
+  python3 -m venv ~/hf-venv
+  ~/hf-venv/bin/pip install huggingface_hub transformers datasets torch
+  ~/hf-venv/bin/hf version
+  ~/hf-venv/bin/python -c "import huggingface_hub, transformers, datasets, torch; print('all present')"
+
+READING BEFORE FETCHING (chapters 2, 9)
+--------------------------------------------------------------------
+  # in a browser: the model's page — licence tag, card text,
+  # Files tab. As data, with the lab's script:
+  python3 hugging-face-lab/scripts/model_info.py
+
+DOWNLOADING (chapter 5)
+--------------------------------------------------------------------
+  hf download <owner/model>                    # the whole repo
+  hf download <owner/model> <file>             # one named file
+  hf download <owner/model> --include '*.json' # matching files
+  hf download <owner/model> --revision <hash>  # one exact version
+  hf download --repo-type dataset <owner/data> # the other shelf
+
+THE CACHE (chapter 5)
+--------------------------------------------------------------------
+  ls ~/.cache/huggingface/hub                  # one folder per repo
+  cat ~/.cache/huggingface/hub/models--<owner>--<model>/refs/main
+  hf cache ls                                  # what is held, weighed
+  hf cache rm model/<owner/model>              # give a repo back
+  HF_HUB_OFFLINE=1 <command>                   # cache only, no net
+
+RUNNING THE LAB (chapters 6-8)
+--------------------------------------------------------------------
+  python3 hugging-face-lab/scripts/sentiment.py        # a model
+  python3 hugging-face-lab/scripts/look_at_dataset.py  # a dataset
+  python3 hugging-face-lab/scripts/tokenizer_play.py   # a tokenizer
+  HF_HUB_OFFLINE=1 python3 hugging-face-lab/scripts/sentiment.py
+
+NOT RUN BY THIS GUIDE (account territory, chapter 11)
+--------------------------------------------------------------------
+  hf auth login        # only ever needed for gated files and
+  hf upload ...        # publishing; this guide used neither.

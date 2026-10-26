@@ -1,0 +1,71 @@
+$ python3 hugging-face-lab/scripts/model_info.py
+============================================================
+sshleifer/tiny-gpt2
+  author:      sshleifer
+  licence tag: None
+  job tags:    ['transformers', 'pytorch', 'tf', 'jax', 'gpt2', 'text-generation']
+  gated:       False
+  downloads:   873103
+  files:
+    .gitattributes                                         391 bytes
+    config.json                                            662 bytes
+    flax_model.msgpack                                 411,642 bytes
+    merges.txt                                         456,318 bytes
+    pytorch_model.bin                                2,514,146 bytes
+    special_tokens_map.json                                 90 bytes
+    tf_model.h5                                        452,120 bytes
+    tokenizer_config.json                                   26 bytes
+    vocab.json                                         898,669 bytes
+  total size:  4,734,064 bytes
+============================================================
+distilbert-base-uncased-finetuned-sst-2-english
+  author:      distilbert
+  licence tag: apache-2.0
+  job tags:    ['transformers', 'pytorch', 'tf', 'rust', 'onnx', 'safetensors']
+  gated:       False
+  downloads:   2584445
+  files:
+    .gitattributes                                         399 bytes
+    README.md                                           10,512 bytes
+    config.json                                            629 bytes
+    map.jpeg                                            81,645 bytes
+    model.safetensors                              267,832,558 bytes
+    onnx/added_tokens.json                                  82 bytes
+    onnx/config.json                                       735 bytes
+    onnx/model.onnx                                267,955,711 bytes
+    onnx/special_tokens_map.json                           125 bytes
+    onnx/tokenizer.json                                711,396 bytes
+    onnx/tokenizer_config.json                           1,283 bytes
+    onnx/vocab.txt                                     231,508 bytes
+    pytorch_model.bin                              267,844,284 bytes
+    rust_model.ot                                  267,846,324 bytes
+    tf_model.h5                                    267,949,840 bytes
+    tokenizer_config.json                                   48 bytes
+    vocab.txt                                          231,508 bytes
+  total size:  1,340,698,587 bytes
+============================================================
+meta-llama/Llama-3.1-8B
+  author:      meta-llama
+  licence tag: llama3.1
+  job tags:    ['transformers', 'safetensors', 'llama', 'text-generation', 'facebook', 'meta']
+  gated:       manual
+  downloads:   602534
+  files:
+    .gitattributes                                       1,519 bytes
+    LICENSE                                              7,627 bytes
+    README.md                                           40,883 bytes
+    USE_POLICY.md                                        4,691 bytes
+    config.json                                            826 bytes
+    generation_config.json                                 185 bytes
+    model-00001-of-00004.safetensors              4,976,698,672 bytes
+    model-00002-of-00004.safetensors              4,999,802,720 bytes
+    model-00003-of-00004.safetensors              4,915,916,176 bytes
+    model-00004-of-00004.safetensors              1,168,138,808 bytes
+    model.safetensors.index.json                        23,950 bytes
+    original/consolidated.00.pth                  16,060,621,688 bytes
+    original/params.json                                   199 bytes
+    original/tokenizer.model                         2,183,982 bytes
+    special_tokens_map.json                                 73 bytes
+    tokenizer.json                                   9,085,658 bytes
+    tokenizer_config.json                               50,500 bytes
+  total size:  32,132,578,157 bytes

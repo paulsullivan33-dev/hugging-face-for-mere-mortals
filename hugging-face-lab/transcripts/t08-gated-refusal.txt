@@ -1,0 +1,4 @@
+$ hf download meta-llama/Llama-3.1-8B config.json
+Error: Access denied. Model 'meta-llama/Llama-3.1-8B' requires approval.
+Hint: set HF_DEBUG=1 as environment variable for full traceback.
+exit code: 1

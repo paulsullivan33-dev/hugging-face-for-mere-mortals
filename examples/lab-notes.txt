@@ -1,0 +1,124 @@
+The lab — one real install, no account, public files only
+====================================================================
+
+The lab is the Hugging Face tooling as pip
+ships it, installed into a fresh virtual
+environment on the build machine (an Ubuntu
+24.04 sandbox, 2 CPUs, 7.7 GB RAM):
+
+  * Python 3.12.3; huggingface_hub 2.3.0
+    (the `hf` command), transformers 5.20.2,
+    datasets 5.1.0, torch 2.14.1+cpu
+    (the CPU-only build; nothing in the
+    guide needs a graphics card).
+  * No Hugging Face account was created
+    and no token was used at any point.
+    Every request was anonymous and every
+    file downloaded was public. The tools
+    print a warning about unauthenticated
+    requests; it is in the transcripts,
+    unedited, because a reader doing the
+    same will see it too.
+
+What the lab ran, in
+hugging-face-lab/transcripts/:
+
+  * t00 versions of all four packages and
+    of the `hf` command itself.
+  * t01 `hf download sshleifer/tiny-gpt2`
+    — the toy model, all 9 files, about
+    4.7 MB, fetched in seconds.
+  * t02 the cache taken apart: blobs
+    named by content hash, a snapshots
+    folder of symbolic links wearing the
+    real filenames, refs/main holding
+    revision 5f91d94b..., and `hf cache ls`
+    listing the lab's three downloads
+    (273.7 MB in total at that point).
+  * t03 three model cards read through
+    the public API (scripts/model_info.py):
+    tiny-gpt2 (no licence recorded),
+    DistilBERT sentiment (apache-2.0,
+    1.34 GB of files across five formats
+    of the same weights), and the gated
+    meta-llama/Llama-3.1-8B (licence
+    llama3.1, gated: manual, 32 GB of
+    files listed — metadata is public
+    even where downloading is fenced).
+  * t08 the fence itself: one small file
+    requested from the gated repository,
+    refused with "Access denied... requires
+    approval", exit code 1.
+  * t04 a transformers pipeline
+    (scripts/sentiment.py) on four
+    invented sentences. The model's
+    weights were fetched by name first
+    (model.safetensors, config.json,
+    vocab.txt, tokenizer_config.json —
+    268 MB) so the download was the
+    chapter-5 kind, not a surprise.
+    Scores: a compliment POSITIVE 0.9996;
+    a complaint NEGATIVE 0.9996; a flat
+    statement of fact ("The meeting is on
+    Tuesday at ten.") judged POSITIVE at
+    0.9428; a slippery sentence 0.6328.
+  * t07 the same script with
+    HF_HUB_OFFLINE=1: identical scores,
+    read entirely from the cache.
+  * t05 a dataset loaded and inspected
+    (scripts/look_at_dataset.py):
+    cornell-movie-review-data/
+    rotten_tomatoes — train 8,530,
+    validation 1,066, test 1,066 rows;
+    features text + label; labels exactly
+    balanced, 4,265 negative / 4,265
+    positive.
+  * t06 a tokenizer taken apart
+    (scripts/tokenizer_play.py): the
+    DistilBERT (uncased) tokenizer,
+    30,522 entries. "Tokenizers are
+    unreasonably effective" becomes
+    9 pieces (token ##izer ##s are un
+    ##rea ##son ##ably effective); a
+    sentence with a capitalised name and
+    the number 14,208 takes 18 tokens
+    for 6 words; a line of code takes 11.
+    With furniture, the model receives
+    [CLS] ... [SEP], ids 101 and 102.
+
+The sandbox's rules, discovered by
+running into them:
+
+  * The first pipeline attempt died when
+    the build session dropped mid-download:
+    the cache was left holding a zero-byte
+    ".incomplete" blob and only config.json.
+    Repeating the download with the file
+    list named explicitly completed it
+    cleanly (hf downloads resume rather
+    than restart). This is chapter 14's
+    offline-cache entry, from life.
+  * The dataset's owner is
+    cornell-movie-review-data. The lab's
+    first guess, cornell-movie-review,
+    returns "dataset doesn't exist" —
+    the Hub answers 401/not-found for
+    wrong names and fenced ones alike,
+    which is chapter 14's second entry.
+  * `hf cache rm` asks for confirmation
+    unless given --yes; run interactively
+    in a script it waits forever. (The
+    lab used it once, to remove a model
+    another piece of work on the same
+    machine had cached, so transcript
+    t02 shows this lab's downloads only.)
+
+Documented only (no account, by
+design): uploading and publishing
+(chapter 11), accepting gated terms,
+Spaces built or duplicated (chapter 10
+is outline), trust_remote_code in any
+form, any multi-gigabyte download,
+GGUF files loaded or run, revision
+pinning as a separate exercise, and
+dataset streaming.

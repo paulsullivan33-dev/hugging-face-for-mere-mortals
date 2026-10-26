@@ -1,0 +1,28 @@
+site_name: Hugging Face for Mere Mortals
+site_description: The public library where AI models, datasets and demos live. Reading a model card before you download, telling safetensors from GGUF, fetching files with the hf command line, running a tiny model and a tiny dataset for real, and judging what deserves your trust.
+site_url: https://paulsullivan33-dev.github.io/hugging-face-for-mere-mortals/
+copyright: 'Part of <a href="https://paulsullivan33-dev.github.io/mere-mortals/">For Mere Mortals</a> · Text <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, code MIT'
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What Hugging Face Is: what-hugging-face-is.md
+  - Reading a Model Card: reading-a-model-card.md
+  - File Formats in Plain Terms: file-formats.md
+  - Installing the Tools: installing-the-tools.md
+  - The hf Command Line: the-hf-cli.md
+  - Pipelines, a Model in Three Lines: pipelines.md
+  - Datasets, Loading and Looking: datasets.md
+  - Tokenizers: tokenizers.md
+  - Judging What to Trust: judging-trust.md
+  - Spaces: spaces.md
+  - Sharing Your Own Work: sharing-your-work.md
+  - The Neighbours: the-neighbours.md
+  - Limits: limits.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md

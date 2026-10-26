@@ -1,0 +1,22 @@
+$ python3 hugging-face-lab/scripts/tokenizer_play.py
+vocab size: 30522
+special tokens: {'unk_token': '[UNK]', 'sep_token': '[SEP]', 'pad_token': '[PAD]', 'cls_token': '[CLS]', 'mask_token': '[MASK]'}
+
+text:   Tokenizers are unreasonably effective
+pieces: ['token', '##izer', '##s', 'are', 'un', '##rea', '##son', '##ably', 'effective']
+ids:    [19204, 17629, 2015, 2024, 4895, 16416, 3385, 8231, 4621]
+count:  9 tokens for 4 words
+
+text:   The Unassuming Alpaca rearranged 14,208 paperclips.
+pieces: ['the', 'una', '##ss', '##uming', 'al', '##pac', '##a', 'rear', '##rang', '##ed', '14', ',', '208', 'paper', '##cl', '##ip', '##s', '.']
+ids:    [1996, 14477, 4757, 24270, 2632, 19498, 2050, 4373, 24388, 2098, 2403, 1010, 18512, 3259, 20464, 11514, 2015, 1012]
+count:  18 tokens for 6 words
+
+text:   for shelf in shelves: print(shelf.name)
+pieces: ['for', 'shelf', 'in', 'shelves', ':', 'print', '(', 'shelf', '.', 'name', ')']
+ids:    [2005, 11142, 1999, 15475, 1024, 6140, 1006, 11142, 1012, 2171, 1007]
+count:  11 tokens for 5 words
+
+with furniture, the model actually sees:
+  [101, 19204, 17629, 2015, 2024, 4895, 16416, 3385, 8231, 4621, 102]
+  ['[CLS]', 'token', '##izer', '##s', 'are', 'un', '##rea', '##son', '##ably', 'effective', '[SEP]']

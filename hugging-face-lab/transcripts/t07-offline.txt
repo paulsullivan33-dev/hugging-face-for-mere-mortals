@@ -1,0 +1,13 @@
+$ HF_HUB_OFFLINE=1 python3 hugging-face-lab/scripts/sentiment.py
+
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]
+Loading weights:  62%|██████▎   | 65/104 [00:00<00:00, 647.79it/s]
+Loading weights: 100%|██████████| 104/104 [00:00<00:00, 504.37it/s]
+'A small, kind film that knows exactly what it is doing.'
+  -> {'label': 'POSITIVE', 'score': 0.9995562434196472}
+'I waited an hour for a bus that never came.'
+  -> {'label': 'NEGATIVE', 'score': 0.9995941519737244}
+'The meeting is on Tuesday at ten.'
+  -> {'label': 'POSITIVE', 'score': 0.9427652359008789}
+'The soup was neither hot nor cold, and somehow both.'
+  -> {'label': 'POSITIVE', 'score': 0.6327742338180542}

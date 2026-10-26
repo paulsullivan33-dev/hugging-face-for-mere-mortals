@@ -1,0 +1,28 @@
+$ python3 hugging-face-lab/scripts/look_at_dataset.py
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/8530 [00:00<?, ? examples/s]
+Generating train split: 100%|██████████| 8530/8530 [00:00<00:00, 179283.28 examples/s]
+Generating validation split:   0%|          | 0/1066 [00:00<?, ? examples/s]
+Generating validation split: 100%|██████████| 1066/1066 [00:00<00:00, 159318.99 examples/s]
+Generating test split:   0%|          | 0/1066 [00:00<?, ? examples/s]
+Generating test split: 100%|██████████| 1066/1066 [00:00<00:00, 176382.82 examples/s]
+DatasetDict({
+    train: Dataset({
+        features: ['text', 'label'],
+        num_rows: 8530
+    })
+    validation: Dataset({
+        features: ['text', 'label'],
+        num_rows: 1066
+    })
+    test: Dataset({
+        features: ['text', 'label'],
+        num_rows: 1066
+    })
+})
+features: {'text': Value('string'), 'label': ClassLabel(names=['neg', 'pos'])}
+{'text': 'the rock is destined to be the 21st century\'s new " conan " and that he\'s going to make a splash even greater than arnold schwarzenegger , jean-claud van damme or steven segal .', 'label': 1}
+{'text': 'the gorgeously elaborate continuation of " the lord of the rings " trilogy is so huge that a column of words cannot adequately describe co-writer/director peter jackson\'s expanded vision of j . r . r . tolkien\'s middle-earth .', 'label': 1}
+{'text': 'effective but too-tepid biopic', 'label': 1}
+first validation row: {'text': 'compassionately explores the seemingly irreconcilable situation between conservative christian parents and their estranged gay and lesbian children .', 'label': 1}
+label counts (train): {'neg': 4265, 'pos': 4265}
